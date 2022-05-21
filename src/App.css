@@ -1,0 +1,77 @@
+:root {
+  --gutter: 20px;
+}
+
+.customized-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa; /* or add it to the track */
+}
+
+/* Add a thumb */
+.customized-scrollbar::-webkit-scrollbar-thumb {
+    background: #000;
+}
+
+@media (min-width: 750px) and (max-width: 970px) {
+  .no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.MenuItemContainer {
+  overflow-x: scroll;
+  display: flex;
+}
+
+.MenuItemContainer .MenuItem {
+  min-width: 400px;
+  height: 30vh;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+}
+
+.MenuItem .MenuItemImage {
+  width: 45%;
+  height: 100%;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+.MenuItem .MenuItemInfo {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.kedaiName {
+  width: 100%;
+  text-align: center;
+  background: rgb(0 0 0 / 50%);
+  padding: 7px;
+  border-top-width: 3px;
+  border-top-color: #0d6efd73;
+  border-bottom-width: 3px;
+  border-bottom-color: #0d6efd73;
+  border-style: solid;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+.kedaiInfo {
+  min-width: 300px;
+  height: 30vh;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+}
+
+
+
+
