@@ -24,6 +24,9 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
     React.useImperativeHandle(ref, () => ({
         focusTo: (target) => {
             focus.current = target
+        },
+        resetTo: () => {
+          controls.reset()
         }
     }))
 
@@ -37,7 +40,9 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
   
         if (onStart) controls.addEventListener('start', onStart)
         if (onEnd) controls.addEventListener('end', onEnd)
-  
+        
+        controls.saveState();
+
         return () => {
           controls.dispose()
           controls.removeEventListener('change', callback)

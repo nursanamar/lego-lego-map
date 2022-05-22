@@ -1,7 +1,8 @@
 import React, { Suspense, useState, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { useProgress, Html  } from "@react-three/drei";
+import { useProgress, Html } from "@react-three/drei";
 import { useNavigate } from 'react-router'
+import { BsCompass } from "react-icons/bs";
 
 import MapControls from "./Controls";
 
@@ -13,7 +14,7 @@ function Loader() {
 }
 
 export default function Map() {
-    const [selected,setSelected] = useState("");
+    const [selected, setSelected] = useState("");
     const navigate = useNavigate();
 
     const modelRef = useRef();
@@ -25,22 +26,29 @@ export default function Map() {
 
     const selectHandler = (e) => {
         setSelected(e.key);
-        
-        if(e.key){
-            navigate('kedai/'+e.key)
+
+        if (e.key) {
+            navigate('kedai/' + e.key)
             controlRef.current.focusTo(e.pos)
         }
     }
 
+    const resetControl = () => {
+        controlRef.current.resetTo()
+    }
+
     return (
         // <Canvas camera={{position: [1.202857067957607, 0.17795647522858266, 1.0680462328280964]}}>
-        <Canvas style={{width:"100%",height: "100%"}} camera={{position: [1.202857067957607, 0.17795647522858266, 1.0680462328280964]}}>
-            <Suspense fallback={<Loader />}>
-                <pointLight position={[5, 5, 5]} />
-                <Model ref={modelRef} onSelect={selectHandler} active={selected} />
-                <MapControls ref={controlRef} onUpdate={console.log} onChange={console.log} />
-            </Suspense>
-        </Canvas>
+        <>
+            <Canvas style={{ width: "100%", height: "100%" }} camera={{ position: [1.202857067957607, 0.17795647522858266, 1.0680462328280964] }}>
+                <Suspense fallback={<Loader />}>
+                    <pointLight position={[5, 5, 5]} />
+                    <Model ref={modelRef} onSelect={selectHandler} active={selected} />
+                    <MapControls ref={controlRef} />
+                </Suspense>
+            </Canvas>
+            <button onClick={resetControl} className='resetButton btn btn-small btn-primary'><BsCompass /></button>
+        </>
     )
 
 }

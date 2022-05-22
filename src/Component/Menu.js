@@ -101,7 +101,7 @@ function KedaiInfo() {
                     Kembali
                 </Link>
             </div>
-            <div class="MenuItemContainer customized-scrollbar">
+            <div className="MenuItemContainer customized-scrollbar">
                 <div className="kedaiInfo" style={{display: "flex",alignItems: "center", justifyContent: "center",backgroundColor:"#181a18"}}>
                     <h3 className="kedaiName" style={{color:"#fff"}}>Masih Kosong</h3>
                 </div>
@@ -115,7 +115,7 @@ function KedaiInfo() {
                     Kembali
                 </Link>
             </div>
-            <div class="MenuItemContainer customized-scrollbar">
+            <div className="MenuItemContainer customized-scrollbar">
                 <div className="kedaiInfo" style={{display: "flex",alignItems: "center", justifyContent: "center",backgroundPosition: "center",backgroundSize: "cover", backgroundImage: "url("+info.image+")"}}>
                     <h3 className="kedaiName" style={{color:"#fff"}}>{info.name}</h3>
                 </div>
