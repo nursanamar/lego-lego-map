@@ -3,7 +3,10 @@ import * as React from 'react'
 import * as THREE from 'three'
 import { MapControls as MapControlsImpl } from 'three-stdlib'
 
-
+// Implemantasi dari Control yang digunakan mengikuti implementasi yang 
+// sama dengan MapControl dari three.js dengan modifikasi tambahan
+// fungsi untuk dapat melakukan focus ke pada target dan reset control ke 
+// posisi awal
 const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => {
     
     const { domElement, camera, onChange, onStart, onEnd, ...rest } = props
@@ -23,9 +26,13 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
 
     React.useImperativeHandle(ref, () => ({
         focusTo: (target) => {
+            // Set target yang akan di 
+            // jadikan focus saat kedai di pilih
             focus.current = target
         },
         resetTo: () => {
+          // Reset control kembali ke 
+          // initial state yang sudah disimpan
           controls.reset()
         }
     }))
@@ -41,6 +48,8 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
         if (onStart) controls.addEventListener('start', onStart)
         if (onEnd) controls.addEventListener('end', onEnd)
         
+        // Simpan initial state dari control 
+        // untuk di gunakan saat reset control
         controls.saveState();
 
         return () => {
@@ -54,11 +63,14 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
       useFrame((state) => {
         
         if (focus.current) {
-            lerpTarget.set(focus.current.x + 0.2, focus.current.y + 0.05 , focus.current.z + 0.2);
+            lerpTarget.set(focus.current.x + 0.2, focus.current.y + 0.05 , focus.current.z - 0.05);
             lookTarget.set(focus.current.x, focus.current.y,focus.current.z);
 
+            // Gerakan kamera ke posisi di dekat kedai yang dipilih
             state.camera.position.lerp(lerpTarget,0.1);
             state.camera.updateProjectionMatrix();
+            
+            // Arahkan kamera menghadap ke kedai
             controls.target = lookTarget
             
             if(state.camera.position.distanceTo(lerpTarget) < 0.0005){

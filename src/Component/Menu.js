@@ -37,6 +37,8 @@ function Menu() {
     },[foods])
     
     useEffect(() => {
+        // Fungsi mencari menggunakan regex dari keyword yang di cari 
+        // Untuk memfilter list
         let re = new RegExp(`${search.toLowerCase()}`);
         let filteredFood = foods.filter((food) => re.test(food.name.toLowerCase()) || re.test(food.tenant.name.toLowerCase()) );
         setFoodList(filteredFood);

@@ -42,7 +42,7 @@ export default function Map() {
         <>
             <Canvas style={{ width: "100%", height: "100%" }} camera={{ position: [1.202857067957607, 0.17795647522858266, 1.0680462328280964] }}>
                 <Suspense fallback={<Loader />}>
-                    <pointLight position={[5, 5, 5]} />
+                    <pointLight position={[5, 5, 0]} />
                     <Model ref={modelRef} onSelect={selectHandler} active={selected} />
                     <MapControls ref={controlRef} />
                 </Suspense>
