@@ -20,7 +20,10 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
     
     const explCamera = camera || defaultCamera
     
+    // Init control dari implementasi built-in map control three.js
     const controls = React.useMemo(() => new MapControlsImpl(explCamera), [explCamera])
+
+    // Vector yang akan digunakan untuk atur posisi kamera
     const lerpTarget = React.useMemo(() => new THREE.Vector3(),[]);
     const lookTarget = React.useMemo(() => new THREE.Vector3(),[]);
 
@@ -62,7 +65,12 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
   
       useFrame((state) => {
         
+        // Cek apakah ada kedai yang sedang di pilih
         if (focus.current) {
+
+            // Set Vector untuk target posisi dan haluan kamera
+            // Vector posisi berdasarkan posisi kedai yang di offset 
+            // agar berada di samping kedai
             lerpTarget.set(focus.current.x + 0.2, focus.current.y + 0.05 , focus.current.z - 0.05);
             lookTarget.set(focus.current.x, focus.current.y,focus.current.z);
 
@@ -73,6 +81,8 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
             // Arahkan kamera menghadap ke kedai
             controls.target = lookTarget
             
+            // Berhenti lakukan gerakan fokus ketika kamera sudah 
+            // dekat dengan target
             if(state.camera.position.distanceTo(lerpTarget) < 0.0005){
                 focus.current = null
             }
