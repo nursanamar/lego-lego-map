@@ -71,8 +71,16 @@ const MapControls =  React.forwardRef((props = { enableDamping: true }, ref) => 
             // Set Vector untuk target posisi dan haluan kamera
             // Vector posisi berdasarkan posisi kedai yang di offset 
             // agar berada di samping kedai
-            lerpTarget.set(focus.current.x + 0.2, focus.current.y + 0.05 , focus.current.z - 0.05);
-            lookTarget.set(focus.current.x, focus.current.y,focus.current.z);
+            lerpTarget.set(
+              focus.current.x + 0.2, 
+              focus.current.y + 0.05 , 
+              focus.current.z - 0.05
+            );
+            lookTarget.set(
+              focus.current.x, 
+              focus.current.y,
+              focus.current.z
+            );
 
             // Gerakan kamera ke posisi di dekat kedai yang dipilih
             state.camera.position.lerp(lerpTarget,0.1);
