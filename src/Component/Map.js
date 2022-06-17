@@ -7,6 +7,7 @@ import { BsCompass } from "react-icons/bs";
 import MapControls from "./Controls";
 
 import Model from "./Model"
+import Navmesh from './Navmesh';
 
 function Loader() {
     const { progress } = useProgress()
@@ -19,6 +20,7 @@ export default function Map() {
 
     const modelRef = useRef();
     const controlRef = useRef();
+    const navRef = useRef();
 
     window.mapMoveTo = (id) => {
         modelRef.current.setFocus(id);
@@ -30,6 +32,9 @@ export default function Map() {
         if (e.key) {
             navigate('kedai/' + e.key)
             controlRef.current.focusTo(e.pos)
+            navRef.current.findPath(e.pos)
+        }else{
+            navRef.current.findPath(null)
         }
     }
 
@@ -43,6 +48,7 @@ export default function Map() {
             <Canvas style={{ width: "100%", height: "100%" }} camera={{ position: [1.202857067957607, 0.17795647522858266, 1.0680462328280964] }}>
                 <Suspense fallback={<Loader />}>
                     <pointLight position={[5, 5, 0]} />
+                    <Navmesh ref={navRef} />
                     <Model ref={modelRef} onSelect={selectHandler} active={selected} />
                     <MapControls ref={controlRef} />
                 </Suspense>

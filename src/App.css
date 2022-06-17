@@ -79,6 +79,42 @@
   margin-right: 10px;
 }
 
+.toggleMenu {
+  position: absolute;
+  left: 10px;
+  transition : all 1s ease;
+}
+
+
+.toggleMenu-hide {
+  top: -45px;
+}
+
+.toggleMenu-show {
+  top: -40px;
+}
+
+.toggleIcon {
+  transition : all 1.5s ease;
+}
+
+.down-icon {
+  transform: rotate(180deg);
+}
+
+.up-icon {
+  transform: rotate(0);
+}
+
+.hide_side_bar {
+  transition : all 2s ease;
+  transform : translate(0,100%);
+}
+
+.show_side_bar {
+  transition : all 2s ease;
+  transform : translate(0);
+}
 
 
 

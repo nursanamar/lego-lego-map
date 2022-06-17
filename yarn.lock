@@ -8672,7 +8672,7 @@ __metadata:
     react-router-dom: ^6.2.1
     react-scripts: 5.0.0
     three: ^0.135.0
-    three-pathfinding: ^1.0.0
+    three-pathfinding: ^1.1.0
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -12990,12 +12990,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-pathfinding@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "three-pathfinding@npm:1.0.0"
+"three-pathfinding@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "three-pathfinding@npm:1.1.0"
   peerDependencies:
     three: 0.x.x
-  checksum: c68c60c553c938360ad6daa9742da3e96aaebd2d13b6ec392840401acf3376dfa49d02035d41a06a94dd2f9ee4f8b76cf1dafe824659408674ce2f8df9961494
+  checksum: 6c6e5ce6e8f3002f90d16edcd1a1b9a375707bb4426465e01736f9da97d7e5ef7e556dc53e51330bf51067e08c70dfd3f92e98862fed4101086d6c05fc6490d3
   languageName: node
   linkType: hard
 
