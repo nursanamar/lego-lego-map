@@ -118,3 +118,73 @@
 
 
 
+
+
+.welcome-container {
+  display: flex;
+  background: #2e3094;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  z-index: 10000;
+}
+
+.welcome-container .about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+}
+
+
+.welcome-container .about span {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 15pt;
+}
+
+.welcome-container .about p {
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+.welcome-container .messages {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #3a84ff;
+  display: flex;
+  height: 100vh;
+}
+
+.welcome-container .messages img {
+  width: 50%;
+  border-radius: 60%;
+}
+
+.welcome-container .messages h1 {
+  font-size: 15pt;
+  text-align: center;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+}
+
+.welcome-container .howto {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  background: #f41973;
+  height: 100vh;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.welcome-container .howto h1 {
+  font-size: 15pt;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+}

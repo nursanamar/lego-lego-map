@@ -34,9 +34,6 @@ function App() {
     // <Router>
       <Container fluid={true}>
         <Row>
-          {/* <Col ref={menuListRef} className="customized-scrollbar d-none d-lg-block" lg="3" style={{ height: "100vh", overflowY: "scroll" }}>
-            
-          </Col> */}
           <Col style={{padding:0}} lg="12" xs="12" sm="12">
             <div style={{ height: "100vh" }}>
               <Suspense fallback={null}>
