@@ -188,3 +188,29 @@
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 600;
 }
+
+
+
+
+
+.header {
+  position: fixed;
+  width: 100vw;
+  background: #3a84ff;
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  width: 50px;
+  border-radius: 50px;
+}
+
+.header h1 {
+  font-size: 13pt;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 600;
+}

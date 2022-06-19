@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useRef, useState } from "react"
 import Map from "./Component/Map";
+import Header from "./Component/Header";
 import { Container, Row, Col } from 'react-bootstrap';
 import {
   BrowserRouter as Router, useLocation
@@ -34,6 +35,7 @@ function App() {
     // <Router>
       <Container fluid={true}>
         <Row>
+        <Header />
           <Col style={{padding:0}} lg="12" xs="12" sm="12">
             <div style={{ height: "100vh" }}>
               <Suspense fallback={null}>
@@ -41,10 +43,10 @@ function App() {
               </Suspense>
             </div>
             <div className={`MenuContainer ${isBarShowed ? 'show_side_bar' : 'hide_side_bar'}`} style={{position: "fixed",bottom:0, width: "100vw"}}>
-              <button onClick={toggle} className={`toggleMenu ${isBarShowed ? "toggleMenu-hide" : "toggleMenu-show"} btn btn-sm btn-secondary`}>
+              {/* <button onClick={toggle} className={`toggleMenu ${isBarShowed ? "toggleMenu-hide" : "toggleMenu-show"} btn btn-sm btn-secondary`}>
                 <BsCaretUp className={`${isBarShowed ? "down-icon" : "up-icon"} toggleIcon`} />
                 {isBarShowed ? "Sembunyikan menu" : "Tampilkan menu"}
-              </button>
+              </button> */}
               <Provider store={store}>
                 <Menu />
               </Provider>

@@ -25,7 +25,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
   }))
 
   for (const key in nodes) {
-    if(/\d[A-Z]/.test(key) || (key === "WC")){
+    if(/\d[A-Z]/.test(key) || (key === "WC") || /LOKET_\d_\d/.test(key)){
         pointers.push(
             <Marker
                 key={key}
@@ -46,7 +46,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
   return (
     <group ref={window.group} onClick={() => onSelect({key: "",pos: []})} dispose={null}>
     {pointers}
-    <group name="Room001" position={[1.2742146253585815, 0.027820739895105362, -1.1792700290679932]} rotation={[0, 1.1988600887854828, 0]} scale={0.021880002692341805} userData={{ name: 'Room.001' }}>
+    <group name="Cafe" position={[1.2742146253585815, 0.027820739895105362, -1.1792700290679932]} rotation={[0, 1.1988600887854828, 0]} scale={0.021880002692341805} userData={{ name: 'Cafe' }}>
         <mesh name="Room1044" geometry={nodes.Room1044.geometry} material={materials.Wall_material} />
         <mesh name="Room1044_1" geometry={nodes.Room1044_1.geometry} material={materials.Window_material} />
         <mesh name="Room1044_2" geometry={nodes.Room1044_2.geometry} material={materials.Glass_material} />
@@ -58,26 +58,25 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Room1044_8" geometry={nodes.Room1044_8.geometry} material={materials['Window_material.002']} />
         <mesh name="Room1044_9" geometry={nodes.Room1044_9.geometry} material={materials['Glass_material.002']} />
       </group>
-      <mesh name="Jembatan" geometry={nodes.Jembatan.geometry} material={materials.b0b0b0} position={[-0.17886000871658325, 0.032505542039871216, 1.803337574005127]} rotation={[0.1423924036808165, 0.8446051336506094, 0.6874241646952334]} scale={[0.06062471121549606, 0.06038551777601242, 0.004841621965169907]} userData={{ name: 'Jembatan' }} />
-      <group name="1L" position={[0.27263471484184265, 0.04339313134551048, 0.6688567996025085]} rotation={[0, 1.0145655401049307, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: '1L' }}>
+      <group name="LOKET_1" position={[0.27263471484184265, 0.04339313134551048, 0.6688567996025085]} rotation={[0, 1.0145655401049307, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: 'LOKET 1' }}>
         <mesh name="Cube028" geometry={nodes.Cube028.geometry} material={materials['Material.906']} />
         <mesh name="Cube028_1" geometry={nodes.Cube028_1.geometry} material={materials['Window_material.003']} />
         <mesh name="Cube028_2" geometry={nodes.Cube028_2.geometry} material={materials['Glass_material.003']} />
         <mesh name="Cube028_3" geometry={nodes.Cube028_3.geometry} material={materials['Plastic_Handle_material.003']} />
       </group>
-      <group name="2L" position={[0.5036515593528748, 0.04339313134551048, 0.2859366536140442]} rotation={[0, 1.0145655401049307, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: '2L' }}>
+      <group name="LOKET_2" position={[0.5036515593528748, 0.04339313134551048, 0.2859366536140442]} rotation={[0, 1.0145655401049307, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: 'LOKET 2' }}>
         <mesh name="Cube028" geometry={nodes.Cube028.geometry} material={materials['Material.906']} />
         <mesh name="Cube028_1" geometry={nodes.Cube028_1.geometry} material={materials['Window_material.003']} />
         <mesh name="Cube028_2" geometry={nodes.Cube028_2.geometry} material={materials['Glass_material.003']} />
         <mesh name="Cube028_3" geometry={nodes.Cube028_3.geometry} material={materials['Plastic_Handle_material.003']} />
       </group>
-      <group name="3L" position={[0.6902579665184021, 0.04339313134551048, -0.12398698925971985]} rotation={[0, 1.158416777808056, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: '3L' }}>
+      <group name="LOKET_3" position={[0.6902579665184021, 0.04339313134551048, -0.12398698925971985]} rotation={[0, 1.158416777808056, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: 'LOKET 3' }}>
         <mesh name="Cube028" geometry={nodes.Cube028.geometry} material={materials['Material.906']} />
         <mesh name="Cube028_1" geometry={nodes.Cube028_1.geometry} material={materials['Window_material.003']} />
         <mesh name="Cube028_2" geometry={nodes.Cube028_2.geometry} material={materials['Glass_material.003']} />
         <mesh name="Cube028_3" geometry={nodes.Cube028_3.geometry} material={materials['Plastic_Handle_material.003']} />
       </group>
-      <group name="4L" position={[0.8386293649673462, 0.04339313134551048, -0.5376105308532715]} rotation={[0, 1.158416777808056, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: '4L' }}>
+      <group name="LOKET_4" position={[0.8386293649673462, 0.04339313134551048, -0.5376105308532715]} rotation={[0, 1.158416777808056, 0]} scale={[0.01956125721335411, 0.01547400001436472, 0.019341886043548584]} userData={{ name: 'LOKET 4' }}>
         <mesh name="Cube028" geometry={nodes.Cube028.geometry} material={materials['Material.906']} />
         <mesh name="Cube028_1" geometry={nodes.Cube028_1.geometry} material={materials['Window_material.003']} />
         <mesh name="Cube028_2" geometry={nodes.Cube028_2.geometry} material={materials['Glass_material.003']} />
@@ -246,7 +245,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube228_23" geometry={nodes.Cube228_23.geometry} material={materials['Material.161']} />
         <mesh name="Cube228_24" geometry={nodes.Cube228_24.geometry} material={materials['Material.158']} />
       </group>
-      <group name="kedai2001" position={[-0.2147178053855896, 0.046899888664484024, 1.3747795820236206]} rotation={[-Math.PI, 0.7608304762950252, -Math.PI]} scale={[0.06652200222015381, 0.02177407033741474, 0.021338999271392822]} userData={{ name: 'kedai2.001' }}>
+      <group name="kedai2001" position={[-0.2147178053855896, 0.046899888664484024, 1.3747795820236206]} rotation={[-Math.PI, 0.7608302776521946, -Math.PI]} scale={[0.06652200222015381, 0.02177407033741474, 0.021338999271392822]} userData={{ name: 'kedai2.001' }}>
         <mesh name="Cube228" geometry={nodes.Cube228.geometry} material={materials['Material.123']} />
         <mesh name="Cube228_1" geometry={nodes.Cube228_1.geometry} material={materials['Material.127']} />
         <mesh name="Cube228_2" geometry={nodes.Cube228_2.geometry} material={materials['Material.124']} />
@@ -273,7 +272,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube228_23" geometry={nodes.Cube228_23.geometry} material={materials['Material.161']} />
         <mesh name="Cube228_24" geometry={nodes.Cube228_24.geometry} material={materials['Material.158']} />
       </group>
-      <group name="kedai2002" position={[0.09225776791572571, 0.04767381027340889, 1.7217954397201538]} rotation={[-Math.PI, 0.7608304762950252, -Math.PI]} scale={[0.06652223318815231, 0.02177407033741474, 0.02133858948945999]} userData={{ name: 'kedai2.002' }}>
+      <group name="kedai2002" position={[0.09225776791572571, 0.04767381027340889, 1.7217954397201538]} rotation={[-Math.PI, 0.7608302776521946, -Math.PI]} scale={[0.06652223318815231, 0.02177407033741474, 0.02133858948945999]} userData={{ name: 'kedai2.002' }}>
         <mesh name="Cube228" geometry={nodes.Cube228.geometry} material={materials['Material.123']} />
         <mesh name="Cube228_1" geometry={nodes.Cube228_1.geometry} material={materials['Material.127']} />
         <mesh name="Cube228_2" geometry={nodes.Cube228_2.geometry} material={materials['Material.124']} />
@@ -354,7 +353,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube210_23" geometry={nodes.Cube210_23.geometry} material={materials['Material.207']} />
         <mesh name="Cube210_24" geometry={nodes.Cube210_24.geometry} material={materials['Material.204']} />
       </group>
-      <group name="kedai3001" position={[-0.10449963808059692, 0.047883450984954834, 1.4769595861434937]} rotation={[-Math.PI, 0.7548092460252291, -Math.PI]} scale={[0.06652200222015381, 0.023675940930843353, 0.021338999271392822]} userData={{ name: 'kedai3.001' }}>
+      <group name="kedai3001" position={[-0.10449963808059692, 0.047883450984954834, 1.4769595861434937]} rotation={[-Math.PI, 0.7548090493354424, -Math.PI]} scale={[0.06652200222015381, 0.023675940930843353, 0.021338999271392822]} userData={{ name: 'kedai3.001' }}>
         <mesh name="Cube210" geometry={nodes.Cube210.geometry} material={materials['Material.110']} />
         <mesh name="Cube210_1" geometry={nodes.Cube210_1.geometry} material={materials['Material.112']} />
         <mesh name="Cube210_2" geometry={nodes.Cube210_2.geometry} material={materials['Material.111']} />
@@ -408,7 +407,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube184_23" geometry={nodes.Cube184_23.geometry} material={materials['Material.405']} />
         <mesh name="Cube184_24" geometry={nodes.Cube184_24.geometry} material={materials['Material.402']} />
       </group>
-      <group name="kedai8" position={[0.8779498338699341, 0.057530101388692856, -0.4324950575828552]} rotation={[-Math.PI, 0.41988328321643015, -Math.PI]} scale={[0.0003980122855864465, -0.0003671098966151476, -0.06375650316476822]} userData={{ name: 'kedai8' }}>
+      <group name="kedai8" position={[0.8779498338699341, 0.057530101388692856, -0.4324950575828552]} rotation={[-Math.PI, 0.41988316496137934, -Math.PI]} scale={[0.0003980122855864465, -0.0003671098966151476, -0.06375650316476822]} userData={{ name: 'kedai8' }}>
         <mesh name="Cube184" geometry={nodes.Cube184.geometry} material={materials['Material.097']} />
         <mesh name="Cube184_1" geometry={nodes.Cube184_1.geometry} material={materials['Material.099']} />
         <mesh name="Cube184_2" geometry={nodes.Cube184_2.geometry} material={materials['Material.098']} />
@@ -681,7 +680,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube007_243" geometry={nodes.Cube007_243.geometry} material={materials['Material.914']} />
         <mesh name="Cube007_244" geometry={nodes.Cube007_244.geometry} material={materials['Material.1174']} />
       </group>
-      <mesh name="Cube005" geometry={nodes.Cube005.geometry} material={materials['Material.001']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.005' }} />
+      <mesh name="Cube005" geometry={nodes.Cube005.geometry} material={materials['Material.003']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.005' }} />
       <mesh name="Cube007" geometry={nodes.Cube007.geometry} material={materials['Material.004']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.007' }} />
       <mesh name="Cube006" geometry={nodes.Cube006.geometry} material={materials['Material.005']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.006' }} />
       <mesh name="Cube008" geometry={nodes.Cube008.geometry} material={materials['Material.006']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.008' }} />
@@ -748,13 +747,13 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="sub02" geometry={nodes.sub02.geometry} material={materials['Tree.Birch.Leaf.Summer.Mat']} />
         <mesh name="sub02_1" geometry={nodes.sub02_1.geometry} material={materials['Tree.Birch.Bark.Mat']} />
       </group>
-      <group name="TreeBirch012" position={[0.1554838865995407, 0.03187188133597374, 0.48184582591056824]} rotation={[0.055399739457538726, -0.1929314757017394, -0.21213501363213622]} scale={0.02264525555074215} userData={{ name: 'Tree.Birch.012' }}>
+      <group name="TreeBirch012" position={[0.1554838865995407, 0.03187188133597374, 0.48184582591056824]} rotation={[0.05539972710265458, -0.1929314361744695, -0.21213495789837447]} scale={0.02264525555074215} userData={{ name: 'Tree.Birch.012' }}>
         <mesh name="sub02" geometry={nodes.sub02.geometry} material={materials['Tree.Birch.Leaf.Summer.Mat']} />
         <mesh name="sub02_1" geometry={nodes.sub02_1.geometry} material={materials['Tree.Birch.Bark.Mat']} />
       </group>
       <mesh name="Cube003" geometry={nodes.Cube003.geometry} material={materials['Material.002']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.003' }} />
       <group name="Cube004" position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.004' }}>
-        <mesh name="Cube009_1" geometry={nodes.Cube009_1.geometry} material={materials.Material} />
+        <mesh name="Cube009_1" geometry={nodes.Cube009_1.geometry} material={materials['Material.001']} />
         <mesh name="Cube009_2" geometry={nodes.Cube009_2.geometry} material={materials['Material.1401']} />
       </group>
       <mesh name="Cube011" geometry={nodes.Cube011.geometry} material={materials['Material.002']} position={[-0.038039885461330414, -0.0013685922604054213, -0.0361003652215004]} scale={[1.9208133220672607, 0.026553651317954063, 1.9208133220672607]} userData={{ name: 'Cube.011' }} />
@@ -768,27 +767,27 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman001" position={[0.5127274394035339, 0.03190174326300621, 0.9006100296974182]} rotation={[0, -0.5237070714238766, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.001' }}>
+      <group name="kursi_taman001" position={[0.5127274394035339, 0.03190174326300621, 0.9006100296974182]} rotation={[0, -0.5237069336680831, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.001' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman002" position={[0.6239752769470215, 0.03190174326300621, 0.6964900493621826]} rotation={[0, -0.5237070714238766, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.002' }}>
+      <group name="kursi_taman002" position={[0.6239752769470215, 0.03190174326300621, 0.6964900493621826]} rotation={[0, -0.5237069336680831, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.002' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman003" position={[0.741182804107666, 0.03190174326300621, 0.44717562198638916]} rotation={[0, -0.4293782204548745, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.003' }}>
+      <group name="kursi_taman003" position={[0.741182804107666, 0.03190174326300621, 0.44717562198638916]} rotation={[0, -0.42937810053970266, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.003' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman004" position={[0.8767661452293396, 0.03190174326300621, 0.11442528665065765]} rotation={[0, -0.35312315830925295, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.004' }}>
+      <group name="kursi_taman004" position={[0.8767661452293396, 0.03190174326300621, 0.11442528665065765]} rotation={[0, -0.3531230824098687, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.004' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman005" position={[0.954738974571228, 0.03190174326300621, -0.16220447421073914]} rotation={[0, -0.2822127400648611, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.005' }}>
+      <group name="kursi_taman005" position={[0.954738974571228, 0.03190174326300621, -0.16220447421073914]} rotation={[0, -0.28221267443154946, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.005' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman006" position={[0.989305317401886, 0.03190174326300621, -0.29080620408058167]} rotation={[0, -0.2822127400648611, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.006' }}>
+      <group name="kursi_taman006" position={[0.989305317401886, 0.03190174326300621, -0.29080620408058167]} rotation={[0, -0.28221267443154946, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.006' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
@@ -800,7 +799,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman009" position={[0.8042089343070984, 0.03190174326300621, 0.2667478919029236]} rotation={[0, -0.4293782204548745, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.009' }}>
+      <group name="kursi_taman009" position={[0.8042089343070984, 0.03190174326300621, 0.2667478919029236]} rotation={[0, -0.42937810053970266, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.009' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
@@ -808,19 +807,19 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman011" position={[0.6849669218063354, 0.03190174326300621, 0.8610406517982483]} rotation={[0, -0.5237070714238766, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.011' }}>
+      <group name="kursi_taman011" position={[0.6849669218063354, 0.03190174326300621, 0.8610406517982483]} rotation={[0, -0.5237069336680831, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.011' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman012" position={[0.7839633822441101, 0.03190174326300621, 0.6667081117630005]} rotation={[0, -0.4293782204548745, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.012' }}>
+      <group name="kursi_taman012" position={[0.7839633822441101, 0.03190174326300621, 0.6667081117630005]} rotation={[0, -0.42937810053970266, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.012' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman013" position={[0.9556567668914795, 0.03190174326300621, 0.2255922555923462]} rotation={[0, -0.35312315830925295, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.013' }}>
+      <group name="kursi_taman013" position={[0.9556567668914795, 0.03190174326300621, 0.2255922555923462]} rotation={[0, -0.3531230824098687, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.013' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman014" position={[1.0297375917434692, 0.03190174326300621, 0.01922873593866825]} rotation={[0, -0.2822127400648611, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.014' }}>
+      <group name="kursi_taman014" position={[1.0297375917434692, 0.03190174326300621, 0.01922873593866825]} rotation={[0, -0.28221267443154946, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.014' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
@@ -832,7 +831,7 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
-      <group name="kursi_taman017" position={[0.8812685608863831, 0.03190174326300621, 0.42106732726097107]} rotation={[0, -0.4293782204548745, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.017' }}>
+      <group name="kursi_taman017" position={[0.8812685608863831, 0.03190174326300621, 0.42106732726097107]} rotation={[0, -0.42937810053970266, 0]} scale={[0.0070044854655861855, 0.0070044854655861855, 0.028017941862344742]} userData={{ name: 'kursi taman.017' }}>
         <mesh name="Cube027" geometry={nodes.Cube027.geometry} material={materials['Material.921']} />
         <mesh name="Cube027_1" geometry={nodes.Cube027_1.geometry} material={materials['Material.920']} />
       </group>
@@ -974,232 +973,232 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman046" position={[0.9572268128395081, 0.07461091130971909, 0.8183093667030334]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.046' }}>
+      <group name="lampu_taman046" position={[0.9572268128395081, 0.07461091130971909, 0.8183093667030334]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.046' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman045" position={[0.9869484901428223, 0.07461091130971909, 0.75818932056427]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.045' }}>
+      <group name="lampu_taman045" position={[0.9869484901428223, 0.07461091130971909, 0.75818932056427]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.045' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman043" position={[1.0809849500656128, 0.07461091130971909, 0.5781806707382202]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.043' }}>
+      <group name="lampu_taman043" position={[1.0809849500656128, 0.07461091130971909, 0.5781806707382202]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.043' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman041" position={[1.0493630170822144, 0.07461091130971909, 0.6402556300163269]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.041' }}>
+      <group name="lampu_taman041" position={[1.0493630170822144, 0.07461091130971909, 0.6402556300163269]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.041' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman040" position={[1.0169727802276611, 0.07461091130971909, 0.6974102854728699]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.040' }}>
+      <group name="lampu_taman040" position={[1.0169727802276611, 0.07461091130971909, 0.6974102854728699]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.040' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman039" position={[1.16970956325531, 0.07461091130971909, 0.40328726172447205]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.039' }}>
+      <group name="lampu_taman039" position={[1.16970956325531, 0.07461091130971909, 0.40328726172447205]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.039' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman037" position={[1.1980334520339966, 0.07461091130971909, 0.3413170278072357]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.037' }}>
+      <group name="lampu_taman037" position={[1.1980334520339966, 0.07461091130971909, 0.3413170278072357]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.037' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman036" position={[1.362712025642395, 0.05932929366827011, -1.9338326454162598]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.036' }}>
+      <group name="lampu_taman036" position={[1.362712025642395, 0.05932929366827011, -1.9338326454162598]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.036' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman035" position={[1.138224720954895, 0.07461091130971909, 0.4637300670146942]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.035' }}>
+      <group name="lampu_taman035" position={[1.138224720954895, 0.07461091130971909, 0.4637300670146942]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.035' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman033" position={[1.111108660697937, 0.07461091130971909, 0.5185385346412659]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.033' }}>
+      <group name="lampu_taman033" position={[1.111108660697937, 0.07461091130971909, 0.5185385346412659]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.033' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman012" position={[1.2310855388641357, 0.07461091130971909, 0.28297287225723267]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.012' }}>
+      <group name="lampu_taman012" position={[1.2310855388641357, 0.07461091130971909, 0.28297287225723267]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.012' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman015" position={[1.262125849723816, 0.07461091130971909, 0.222904235124588]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.015' }}>
+      <group name="lampu_taman015" position={[1.262125849723816, 0.07461091130971909, 0.222904235124588]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.015' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman018" position={[1.2974773645401, 0.07461091130971909, 0.15191403031349182]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.018' }}>
+      <group name="lampu_taman018" position={[1.2974773645401, 0.07461091130971909, 0.15191403031349182]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.018' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman021" position={[1.3164464235305786, 0.07461091130971909, 0.08782165497541428]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.021' }}>
+      <group name="lampu_taman021" position={[1.3164464235305786, 0.07461091130971909, 0.08782165497541428]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.021' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman022" position={[1.3368525505065918, 0.07461091130971909, 0.022867046296596527]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.022' }}>
+      <group name="lampu_taman022" position={[1.3368525505065918, 0.07461091130971909, 0.022867046296596527]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.022' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman027" position={[1.363006830215454, 0.07461091130971909, -0.04180014505982399]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.027' }}>
+      <group name="lampu_taman027" position={[1.363006830215454, 0.07461091130971909, -0.04180014505982399]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.027' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman031" position={[1.4049686193466187, 0.07461091130971909, -0.09554576873779297]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.031' }}>
+      <group name="lampu_taman031" position={[1.4049686193466187, 0.07461091130971909, -0.09554576873779297]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.031' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman034" position={[1.4449185132980347, 0.07461091130971909, -0.1504410207271576]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.034' }}>
+      <group name="lampu_taman034" position={[1.4449185132980347, 0.07461091130971909, -0.1504410207271576]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.034' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman038" position={[1.4049686193466187, 0.07461091130971909, -0.09554576873779297]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.038' }}>
+      <group name="lampu_taman038" position={[1.4049686193466187, 0.07461091130971909, -0.09554576873779297]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.038' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman042" position={[1.4837188720703125, 0.07461091130971909, -0.20389923453330994]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.042' }}>
+      <group name="lampu_taman042" position={[1.4837188720703125, 0.07461091130971909, -0.20389923453330994]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.042' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman044" position={[1.5276926755905151, 0.07461091130971909, -0.2714405357837677]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.044' }}>
+      <group name="lampu_taman044" position={[1.5276926755905151, 0.07461091130971909, -0.2714405357837677]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.044' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman047" position={[1.551835060119629, 0.07461091130971909, -0.3358203172683716]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.047' }}>
+      <group name="lampu_taman047" position={[1.551835060119629, 0.07461091130971909, -0.3358203172683716]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.047' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman048" position={[1.5777019262313843, 0.07461091130971909, -0.4004875123500824]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.048' }}>
+      <group name="lampu_taman048" position={[1.5777019262313843, 0.07461091130971909, -0.4004875123500824]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.048' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman049" position={[1.5901180505752563, 0.07461091130971909, -0.45911911129951477]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.049' }}>
+      <group name="lampu_taman049" position={[1.5901180505752563, 0.07461091130971909, -0.45911911129951477]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.049' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman050" position={[1.5963261127471924, 0.07461091130971909, -0.5270627737045288]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.050' }}>
+      <group name="lampu_taman050" position={[1.5963261127471924, 0.07461091130971909, -0.5270627737045288]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.050' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman051" position={[1.6011545658111572, 0.07461091130971909, -0.595696210861206]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.051' }}>
+      <group name="lampu_taman051" position={[1.6011545658111572, 0.07461091130971909, -0.595696210861206]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.051' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman052" position={[1.6077075004577637, 0.07461091130971909, -0.6632950305938721]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.052' }}>
+      <group name="lampu_taman052" position={[1.6077075004577637, 0.07461091130971909, -0.6632950305938721]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.052' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman053" position={[1.6208133697509766, 0.07461091130971909, -0.7298591732978821]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.053' }}>
+      <group name="lampu_taman053" position={[1.6208133697509766, 0.07461091130971909, -0.7298591732978821]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.053' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman054" position={[1.6332294940948486, 0.07461091130971909, -0.7943539619445801]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.054' }}>
+      <group name="lampu_taman054" position={[1.6332294940948486, 0.07461091130971909, -0.7943539619445801]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.054' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman055" position={[1.646680235862732, 0.07461091130971909, -0.8619527220726013]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.055' }}>
+      <group name="lampu_taman055" position={[1.646680235862732, 0.07461091130971909, -0.8619527220726013]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.055' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman056" position={[1.6546127796173096, 0.07461091130971909, -0.9298964142799377]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.056' }}>
+      <group name="lampu_taman056" position={[1.6546127796173096, 0.07461091130971909, -0.9298964142799377]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.056' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman057" position={[1.6618554592132568, 0.07461091130971909, -0.9971503019332886]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.057' }}>
+      <group name="lampu_taman057" position={[1.6618554592132568, 0.07461091130971909, -0.9971503019332886]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.057' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman058" position={[1.671512484550476, 0.07461091130971909, -1.0661286115646362]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.058' }}>
+      <group name="lampu_taman058" position={[1.671512484550476, 0.07461091130971909, -1.0661286115646362]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.058' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman059" position={[1.682548999786377, 0.07461091130971909, -1.1320029497146606]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.059' }}>
+      <group name="lampu_taman059" position={[1.682548999786377, 0.07461091130971909, -1.1320029497146606]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.059' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman060" position={[1.6877223253250122, 0.07461091130971909, -1.1982221603393555]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.060' }}>
+      <group name="lampu_taman060" position={[1.6877223253250122, 0.07461091130971909, -1.1982221603393555]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.060' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman061" position={[1.6877223253250122, 0.07461091130971909, -1.2658209800720215]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.061' }}>
+      <group name="lampu_taman061" position={[1.6877223253250122, 0.07461091130971909, -1.2658209800720215]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.061' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman062" position={[1.6877223253250122, 0.07461091130971909, -1.33583402633667]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.062' }}>
+      <group name="lampu_taman062" position={[1.6877223253250122, 0.07461091130971909, -1.33583402633667]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.062' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman063" position={[1.6877223253250122, 0.07461091130971909, -1.3896371126174927]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.063' }}>
+      <group name="lampu_taman063" position={[1.6877223253250122, 0.07461091130971909, -1.3896371126174927]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.063' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman064" position={[1.6701328754425049, 0.07461091130971909, -1.4506829977035522]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.064' }}>
+      <group name="lampu_taman064" position={[1.6701328754425049, 0.07461091130971909, -1.4506829977035522]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.064' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman065" position={[1.6423499584197998, 0.07461091130971909, -1.5309182405471802]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.065' }}>
+      <group name="lampu_taman065" position={[1.6423499584197998, 0.07461091130971909, -1.5309182405471802]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.065' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman066" position={[1.6057052612304688, 0.07461091130971909, -1.584328532218933]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.066' }}>
+      <group name="lampu_taman066" position={[1.6057052612304688, 0.07461091130971909, -1.584328532218933]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.066' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman067" position={[1.5661864280700684, 0.07461091130971909, -1.6432474851608276]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.067' }}>
+      <group name="lampu_taman067" position={[1.5661864280700684, 0.07461091130971909, -1.6432474851608276]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.067' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman068" position={[1.5273860692977905, 0.07461091130971909, -1.69953191280365]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.068' }}>
+      <group name="lampu_taman068" position={[1.5273860692977905, 0.07461091130971909, -1.69953191280365]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.068' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman069" position={[1.487436056137085, 0.07461091130971909, -1.7555768489837646]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.069' }}>
+      <group name="lampu_taman069" position={[1.487436056137085, 0.07461091130971909, -1.7555768489837646]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.069' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman070" position={[1.4477734565734863, 0.07461091130971909, -1.80874764919281]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.070' }}>
+      <group name="lampu_taman070" position={[1.4477734565734863, 0.07461091130971909, -1.80874764919281]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.070' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
       </group>
-      <group name="lampu_taman071" position={[1.4089730978012085, 0.07461091130971909, -1.8688162565231323]} rotation={[0, 0.05125741479260424, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.071' }}>
+      <group name="lampu_taman071" position={[1.4089730978012085, 0.07461091130971909, -1.8688162565231323]} rotation={[0, 0.05125740121695014, 0]} scale={[0.00136694370303303, 0.055869221687316895, -0.0015460458816960454]} userData={{ name: 'lampu taman.071' }}>
         <mesh name="Cylinder" geometry={nodes.Cylinder.geometry} material={materials['Material.1413']} />
         <mesh name="Cylinder_1" geometry={nodes.Cylinder_1.geometry} material={materials['Material.1412']} />
         <mesh name="Cylinder_2" geometry={nodes.Cylinder_2.geometry} material={materials['Material.905']} />
@@ -1212,25 +1211,25 @@ function Model({onSelect = (e) => {}, active = ""}, ref) {
         <mesh name="Cube051_4" geometry={nodes.Cube051_4.geometry} material={materials['Handle_material.001']} />
       </group>
       <group name="grab" position={[0.147443950176239, 0.03312992304563522, 1.139008641242981]} rotation={[-Math.PI, -0.9417980527070837, -Math.PI]} scale={[-0.0005059291725046933, -0.0020696688443422318, 0.0004016940656583756]} userData={{ name: 'grab' }}>
-        <mesh name="Cube005_1" geometry={nodes.Cube005_1.geometry} material={materials['Material.1702']} />
-        <mesh name="Cube005_2" geometry={nodes.Cube005_2.geometry} material={materials['Material.1701']} />
-        <mesh name="Cube005_3" geometry={nodes.Cube005_3.geometry} material={materials['Material.1700']} />
-        <mesh name="Cube005_4" geometry={nodes.Cube005_4.geometry} material={materials['Material.1699']} />
-        <mesh name="Cube005_5" geometry={nodes.Cube005_5.geometry} material={materials['Material.1698']} />
-        <mesh name="Cube005_6" geometry={nodes.Cube005_6.geometry} material={materials['Material.1697']} />
-        <mesh name="Cube005_7" geometry={nodes.Cube005_7.geometry} material={materials['Material.1696']} />
-        <mesh name="Cube005_8" geometry={nodes.Cube005_8.geometry} material={materials['Material.1695']} />
-        <mesh name="Cube005_9" geometry={nodes.Cube005_9.geometry} material={materials['Material.1694']} />
-        <mesh name="Cube005_10" geometry={nodes.Cube005_10.geometry} material={materials['Material.1693']} />
-        <mesh name="Cube005_11" geometry={nodes.Cube005_11.geometry} material={materials['Material.1692']} />
-        <mesh name="Cube005_12" geometry={nodes.Cube005_12.geometry} material={materials['Material.1691']} />
-        <mesh name="Cube005_13" geometry={nodes.Cube005_13.geometry} material={materials['Material.1690']} />
-        <mesh name="Cube005_14" geometry={nodes.Cube005_14.geometry} material={materials['Material.1689']} />
-        <mesh name="Cube005_15" geometry={nodes.Cube005_15.geometry} material={materials['Material.1688']} />
-        <mesh name="Cube005_16" geometry={nodes.Cube005_16.geometry} material={materials['Material.1687']} />
-        <mesh name="Cube005_17" geometry={nodes.Cube005_17.geometry} material={materials['Material.1686']} />
-        <mesh name="Cube005_18" geometry={nodes.Cube005_18.geometry} material={materials['Material.1685']} />
-        <mesh name="Cube005_19" geometry={nodes.Cube005_19.geometry} material={materials['Material.1684']} />
+        <mesh name="Cube019" geometry={nodes.Cube019.geometry} material={materials['Material.1702']} />
+        <mesh name="Cube019_1" geometry={nodes.Cube019_1.geometry} material={materials['Material.1701']} />
+        <mesh name="Cube019_2" geometry={nodes.Cube019_2.geometry} material={materials['Material.1700']} />
+        <mesh name="Cube019_3" geometry={nodes.Cube019_3.geometry} material={materials['Material.1699']} />
+        <mesh name="Cube019_4" geometry={nodes.Cube019_4.geometry} material={materials['Material.1698']} />
+        <mesh name="Cube019_5" geometry={nodes.Cube019_5.geometry} material={materials['Material.1697']} />
+        <mesh name="Cube019_6" geometry={nodes.Cube019_6.geometry} material={materials['Material.1696']} />
+        <mesh name="Cube019_7" geometry={nodes.Cube019_7.geometry} material={materials['Material.1695']} />
+        <mesh name="Cube019_8" geometry={nodes.Cube019_8.geometry} material={materials['Material.1694']} />
+        <mesh name="Cube019_9" geometry={nodes.Cube019_9.geometry} material={materials['Material.1693']} />
+        <mesh name="Cube019_10" geometry={nodes.Cube019_10.geometry} material={materials['Material.1692']} />
+        <mesh name="Cube019_11" geometry={nodes.Cube019_11.geometry} material={materials['Material.1691']} />
+        <mesh name="Cube019_12" geometry={nodes.Cube019_12.geometry} material={materials['Material.1690']} />
+        <mesh name="Cube019_13" geometry={nodes.Cube019_13.geometry} material={materials['Material.1689']} />
+        <mesh name="Cube019_14" geometry={nodes.Cube019_14.geometry} material={materials['Material.1688']} />
+        <mesh name="Cube019_15" geometry={nodes.Cube019_15.geometry} material={materials['Material.1687']} />
+        <mesh name="Cube019_16" geometry={nodes.Cube019_16.geometry} material={materials['Material.1686']} />
+        <mesh name="Cube019_17" geometry={nodes.Cube019_17.geometry} material={materials['Material.1685']} />
+        <mesh name="Cube019_18" geometry={nodes.Cube019_18.geometry} material={materials['Material.1684']} />
       </group>
       <mesh name="Text" geometry={nodes.Text.geometry} material={nodes.Text.material} position={[-0.3264804184436798, 0.2369430810213089, 1.913317322731018]} rotation={[1.5931962286550485, -0.0721831231912422, -0.7659129097270196]} scale={[0.03137537091970444, 0.012685677036643028, 0.031013835221529007]} userData={{ name: 'Text' }} />
       <mesh name="Plane" geometry={nodes.Plane.geometry} material={nodes.Plane.material} position={[-0.5469123125076294, 0.03466302156448364, 1.4445627927780151]} rotation={[0, 0.7327753961560417, 0]} scale={[-0.003392774611711502, 0.04055315628647804, 0.04055315628647804]} userData={{ name: 'Plane' }} />

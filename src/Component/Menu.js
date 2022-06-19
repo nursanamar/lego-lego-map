@@ -69,8 +69,8 @@ function Menu() {
             <div>
                 <InputGroup style={{ padding: "10px" }}>
                     <FormControl
-                        placeholder="Cari Makanan"
-                        aria-label="Cari Makanan"
+                        placeholder="Cari Makanan/Kedai"
+                        aria-label="Cari Makanan/Kedai"
                         aria-describedby=""
                         onChange={(e) => {
                             setSearch(e.target.value)
@@ -107,7 +107,7 @@ function KedaiInfo() {
     return info === undefined ? (
         <>
             <div style={{ paddingLeft: "10px", marginBottom: "10px" }}>
-                <Link className="BackButton btn btn-primary" to="/">
+                <Link className="BackButton btn btn-primary" to="/menu">
                     Kembali
                 </Link>
             </div>
